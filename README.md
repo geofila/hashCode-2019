@@ -1,1 +1,1 @@
-# hashCode-2019
+###1st Place in Greece scoring: 915.339###
