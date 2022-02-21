@@ -1,7 +1,6 @@
 import pprint
 import sys
 
-#opou photo1 slide1
 def find_score(photo1, photo2):
     common_el = len(list(set(photo1["tags"]).intersection(photo2["tags"])))
     return min(common_el, abs(len(photo1["tags"]) - common_el),abs(len(photo2["tags"]) - common_el))
@@ -9,9 +8,6 @@ def find_score(photo1, photo2):
 def find_common(photo1, photo2):
     return list(set(photo1["tags"]).union(photo2["tags"]))
 
-#photos=[photos1,...]
-#photos1={orient:,num_tags:,tags:[]}
-#photos[1]['orient']
 def read_file(file):
     photos = []
     with open(file,"r") as file:
@@ -19,7 +15,6 @@ def read_file(file):
         N = int(lines[0])
         i = 0
         for line in lines[1:]:
-            #data = orient:,num_tags:,tags:
             data = line.split()
             photo = {'num':str(i),'orient':data[0],'num_tags':data[1],'tags':data[2:]}
             photos.append(photo)
@@ -65,10 +60,6 @@ if __name__=="__main__":
                      'num_tags':len(tags),
                      'tags':tags}
         slides.append(new_slide)
-    #pprint.pprint(slides)
 
-    print(len(slides))
     nsqrt(slides)
-    #for slide in slides:
-    #    print(slide['num'])
 
