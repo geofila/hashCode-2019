@@ -61,5 +61,7 @@ if __name__=="__main__":
                      'tags':tags}
         slides.append(new_slide)
 
+    print(len(slides))    
     nsqrt(slides)
-
+    for slide in slides:
+        print(slide['num'])
